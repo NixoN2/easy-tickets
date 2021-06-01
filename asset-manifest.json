@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/easy-tickets/static/css/main.512f51eb.chunk.css",
+    "main.js": "/easy-tickets/static/js/main.10d7e08b.chunk.js",
+    "main.js.map": "/easy-tickets/static/js/main.10d7e08b.chunk.js.map",
+    "runtime-main.js": "/easy-tickets/static/js/runtime-main.267de95c.js",
+    "runtime-main.js.map": "/easy-tickets/static/js/runtime-main.267de95c.js.map",
+    "static/js/2.20a1137f.chunk.js": "/easy-tickets/static/js/2.20a1137f.chunk.js",
+    "static/js/2.20a1137f.chunk.js.map": "/easy-tickets/static/js/2.20a1137f.chunk.js.map",
+    "index.html": "/easy-tickets/index.html",
+    "static/css/main.512f51eb.chunk.css.map": "/easy-tickets/static/css/main.512f51eb.chunk.css.map",
+    "static/js/2.20a1137f.chunk.js.LICENSE.txt": "/easy-tickets/static/js/2.20a1137f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.267de95c.js",
+    "static/js/2.20a1137f.chunk.js",
+    "static/css/main.512f51eb.chunk.css",
+    "static/js/main.10d7e08b.chunk.js"
+  ]
+}
