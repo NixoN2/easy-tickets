@@ -1,7 +1,7 @@
 {
   "name": "easy-tickets",
   "version": "0.1.0",
-  "homepage": "https://NixoN2.github.io",
+  "homepage": "https://nixon2.github.io/easy-tickets/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
