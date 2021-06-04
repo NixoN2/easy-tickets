@@ -15,14 +15,11 @@ const TicketList = (props) => {
                 localStorage.setItem('listNames', JSON.stringify(props.listNames));
             }
         }
-        // if (props.lists !== []){
-        //     props.setTickets(props.lists[0]);
-        // }
     }
     return (
         <div className="w-screen">
             <button onClick={onDelete} className="w-32 h-8 bg-purple-400 rounded-xl ml-2 mt-2">Удалить</button>
-            {props.tickets[1] ? props.tickets[1].map(ticket => <Ticket position={ticket[0]} text={ticket[1]} check={ticket[2]} done={props.done} setDone={props.setDone}/>) : null}
+            {props.tickets[1] ? props.tickets[1].map((ticket,idx) => <Ticket position={ticket[0]} lists={props.lists} setLists={props.setLists} text={ticket[1]} setTickets={props.setTickets} checked={props.tickets[2][idx]} idx={idx} done={props.done} tickets={props.tickets} setDone={props.setDone}/>) : null}
         </div>
     )
 }

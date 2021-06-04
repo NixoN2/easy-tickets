@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import FileParser from './FileParser/FileParser';
 import Progress from './Progress/Progress';
 import TicketList from './TicketsList/TicketList';
+import Random from './Random/Random';
 const App = () => {
     let ticketLists = JSON.parse(localStorage.getItem('lists'));
     let names = JSON.parse(localStorage.getItem('listNames'));
@@ -16,7 +17,7 @@ const App = () => {
             if (e.target.value === lists[i][0]){
                 setTickets(lists[i]);
                 setTotal(lists[i][1].length);
-                setDone(0);
+                setDone(lists[i][2].filter(item => item === true).length);
             }
         }
     }
@@ -29,6 +30,7 @@ const App = () => {
                 </select>
                 <FileParser setTickets={setTickets} setTotal={setTotal} lists={lists} setLists={setLists} setListNames={setListNames} listNames={listNames}/>
                 <Progress total={total} done={done}/>
+                <Random tickets={tickets}/>
                 <TicketList lists={lists} setLists={setLists} setTickets={setTickets} listNames={listNames} setListNames={setListNames} tickets={tickets} done={done} setDone={setDone} />
             </div>
         </div>

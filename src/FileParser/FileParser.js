@@ -17,8 +17,7 @@ const FileParser = (props) => {
                 if (divided[0] === ''){
                     divided[0] = divided[1];
                 }
-                result.push([divided[0].match( /\d+/g)[0], divided.slice(1).join(' '), false]);
-                console.log(result);
+                result.push([divided[0].match( /\d+/g)[0], divided.slice(1).join(' ')]);
             })
             setFile(result);
         }
@@ -26,11 +25,11 @@ const FileParser = (props) => {
     }
     const addList = (e) => {
         e.preventDefault()
-        props.setTickets([listName, file]);
+        props.setTickets([listName, file, [...file.map(item => false)]]);
         props.setTotal(file.length);
-        localStorage.setItem('lists',JSON.stringify(props.lists ? props.lists.concat([[listName, file]]) : [].concat([[listName, file]])))
+        localStorage.setItem('lists',JSON.stringify(props.lists ? props.lists.concat([[listName, file,[...file.map(item => false)]]]) : [].concat([[listName, file,[...file.map(item => false)]]])))
         localStorage.setItem('listNames',JSON.stringify(props.listNames ? props.listNames.concat(listName) : [].concat(listName)));
-        props.setLists(props.lists ? props.lists.concat([[listName, file]]) : [].concat([[listName,file]]))
+        props.setLists(props.lists ? props.lists.concat([[listName, file,[...file.map(item => false)]]]) : [].concat([[listName,file,[...file.map(item => false)]]]))
         props.setListNames(props.listNames ? props.listNames.concat(listName) : [].concat(listName));
         setListName('');
         document.getElementById('listName').value = '';
