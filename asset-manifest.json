@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/easy-tickets/static/css/main.acde8979.chunk.css",
-    "main.js": "/easy-tickets/static/js/main.c0a41154.chunk.js",
-    "main.js.map": "/easy-tickets/static/js/main.c0a41154.chunk.js.map",
+    "main.js": "/easy-tickets/static/js/main.bba81a33.chunk.js",
+    "main.js.map": "/easy-tickets/static/js/main.bba81a33.chunk.js.map",
     "runtime-main.js": "/easy-tickets/static/js/runtime-main.267de95c.js",
     "runtime-main.js.map": "/easy-tickets/static/js/runtime-main.267de95c.js.map",
-    "static/js/2.a55c1595.chunk.js": "/easy-tickets/static/js/2.a55c1595.chunk.js",
-    "static/js/2.a55c1595.chunk.js.map": "/easy-tickets/static/js/2.a55c1595.chunk.js.map",
-    "54790efa0bf5dd8148a49930a267be5f.js": "/easy-tickets/54790efa0bf5dd8148a49930a267be5f.js",
-    "54790efa0bf5dd8148a49930a267be5f.js.LICENSE.txt": "/easy-tickets/54790efa0bf5dd8148a49930a267be5f.js.LICENSE.txt",
+    "static/js/2.8d368f00.chunk.js": "/easy-tickets/static/js/2.8d368f00.chunk.js",
+    "static/js/2.8d368f00.chunk.js.map": "/easy-tickets/static/js/2.8d368f00.chunk.js.map",
     "index.html": "/easy-tickets/index.html",
     "static/css/main.acde8979.chunk.css.map": "/easy-tickets/static/css/main.acde8979.chunk.css.map",
-    "static/js/2.a55c1595.chunk.js.LICENSE.txt": "/easy-tickets/static/js/2.a55c1595.chunk.js.LICENSE.txt"
+    "static/js/2.8d368f00.chunk.js.LICENSE.txt": "/easy-tickets/static/js/2.8d368f00.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.267de95c.js",
-    "static/js/2.a55c1595.chunk.js",
+    "static/js/2.8d368f00.chunk.js",
     "static/css/main.acde8979.chunk.css",
-    "static/js/main.c0a41154.chunk.js"
+    "static/js/main.bba81a33.chunk.js"
   ]
 }
