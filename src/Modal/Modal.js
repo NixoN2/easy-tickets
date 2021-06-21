@@ -12,9 +12,24 @@ const Modal = (props) => {
 
 
     const visible = props.show ? 'fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 block' : 'fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 hidden';
-    const numberOfPages = props.pages && props.pages[props.ticket] && props.pages[props.ticket][1]-props.pages[props.ticket][0] + 1;
-    console.log(numberOfPages);
-
+    // const numberOfPages = props.pages && props.pages[props.ticket] && props.pages[props.ticket][1]-props.pages[props.ticket][0] + 1;
+    let pagesArray=[];
+    if (props.pages && props.pages[props.ticket]){
+        const pages = [...props.pages[props.ticket]];
+        pages.forEach((ticketPages) => {
+            if (ticketPages.split('-').length === 1){
+                pagesArray.push(Number(ticketPages));
+            }
+            else{
+                const range = ticketPages.split('-');
+                const range1 = Number(range[0]);
+                const range2 = Number(range[1]);
+                for (let i = range1; i <= range2; ++i){
+                    pagesArray.push(i);
+                }
+            }
+        })
+    }
     return (
         <div className={visible} onClick={props.handleClose}>
             <section className="fixed bg-white w-4/5 h-full overflow-auto max-h-192 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -30,11 +45,11 @@ const Modal = (props) => {
                     className="w-3/5 mx-auto"
                 >   
         {/* <Page pageNumber={pageNumber} className={`overflow-y-scroll w-4/5 h-192 mx-auto`} scale={1.6} /> */}
-        {Array.from(new Array(numberOfPages), (el, index) => (
+        {pagesArray.map((el, index) => {return <Page key={`page_${index+1}`} pageNumber={el} scale={2} />} )}
+        {/* {Array.from(new Array(numberOfPages), (el, index) => (
         <Page key={`page_${index + 1}`} pageNumber={index +Number(props.pages && props.pages[props.ticket][0])} scale={2.5}/>
-        ))}
+        ))} */}
                 </Document> : null}
-               
 
             </section>
         </div>

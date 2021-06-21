@@ -18,8 +18,8 @@ const FileParser = (props) => {
             tickets.forEach(ticket => {
                 let divided = ticket.split('|')[0].split(' ');
                 let range = ticket.split('|')[1];
-                range = [Number(range.split('-')[0]),Number(range.split('-')[1])]
-                ranges.push(range);
+                // range = [Number(range.split('-')[0]),Number(range.split('-')[1])]
+                ranges.push(range.split(','));
                 if (divided[0] === ''){
                     divided[0] = divided[1];
                 }
